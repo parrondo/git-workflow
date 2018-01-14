@@ -41,11 +41,11 @@ Development branches
 
 When you start a new feature or a bugfix, you create a new branch from master HEAD
 
-.. code-block :: $ (master) git checkout -b featureA
-.. code-block :: $ (featureA) ...“You work and modify all you need”...
-.. code-block :: $ (featureA) git add -A
-.. code-block :: $ (featureA) git commit -a -m "featureA part 1"
-.. code-block :: $ (featureA) git commit -a -m "featureA part 2"
+``$ (master) git checkout -b featureA``
+``$ (featureA) ...“You work and modify all you need”...``
+``$ (featureA) git add -A``
+``$ (featureA) git commit -a -m "featureA part 1"``
+``$ (featureA) git commit -a -m "featureA part 2"``
 
   .. figure:: images/general/image2.png
      :align: left
@@ -56,7 +56,7 @@ When you start a new feature or a bugfix, you create a new branch from master HE
 
 Follow branch master evolution and regularly ensure your code still works, by rebasing branch featureA on branch master.
 
-.. code-block :: $ (featureA) git rebase master
+``$ (featureA) git rebase master``
 When developments are done (commits fa1 / fa2 in schema below), you do a last rebase.
 If tests pass on development branch after rebase, they should pass on master after merge, so **you ensure that branch "master" is always working well**
 
@@ -70,8 +70,8 @@ If tests pass on development branch after rebase, they should pass on master aft
  
 The maintainer can now merge this branch in master without big conflicts. Use no-ff option to force a merge commit, so **history can stay clearly readable** (to see where the branch has started and where it has been merged).
 
-.. code-block :: $ (featureA) git checkout -b master
-.. code-block :: $ (master) git merge --no-ff featureA
+``$ (featureA) git checkout -b master``
+``$ (master) git merge --no-ff featureA``
 
   .. figure:: images/general/image4.png
      :align: left
@@ -82,17 +82,17 @@ The maintainer can now merge this branch in master without big conflicts. Use no
 
 Now that the branch has been merged, remove the development branch.
 
-.. code-block :: $ (master) git branch -d featureA
-.. code-block :: $ (master) git push origin :featureA
+``$ (master) git branch -d featureA``
+``$ (master) git push origin :featureA``
 
 Stable branches
 ===============
 
 When you prepare a release, tag the branch master, then start a stable branch.
 
-.. code-block :: $ (master) git tag 1.0
-.. code-block :: $ (master) git checkout -b stable1.0
-.. code-block :: $ (stable1.0) git push origin stable1.0
+``$ (master) git tag 1.0``
+``$ (master) git checkout -b stable1.0``
+``$ (stable1.0) git push origin stable1.0``
 
 This branch may be deployed on different servers.
 
@@ -107,10 +107,10 @@ While development goes on, you possibly have to do some hotfixes (for example: c
 
 Regularly, the maintainer merges stable branch in master to bring back these commits. This action is particularly important before the next release.
 
-.. code-block :: $ (stable1.0) git commit -a -m "hotfix 1"
-.. code-block :: $ (stable1.0) git rebase maste
-.. code-block :: $ (stable1.0) git checkout -b master
-.. code-block :: $ (master) git merge --no-ff stable1.0
+``$ (stable1.0) git commit -a -m "hotfix 1"``
+``$ (stable1.0) git rebase maste``
+``$ (stable1.0) git checkout -b master``
+``$ (master) git merge --no-ff stable1.0``
 
 A complete history example
 ==========================
