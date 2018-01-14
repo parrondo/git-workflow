@@ -2,7 +2,7 @@
 Robust GIT workflow for research projects
 =========================================
 
-Here we present a GIT workflow which is very robust. It is based on the referenced pages of `Florent Lebreton`_. We have tested this workflow thoroughly and may say it is really simple an stable. We have included some simplifications at the end through git-simple shell scripts.
+Here we present a GIT workflow which is very robust. It is based on the referenced pages of `Florent Lebreton`_. We have tested this workflow thoroughly and may say it is really simple an stable. We have included some simplifications at the end through `git-simple`_ shell scripts.
 
 Rules
 =====
