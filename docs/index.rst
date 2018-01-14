@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. figure:: images/general/general-book-cyborg.jpg
+.. figure:: images/general/simpledesktops.png
    :align: center
    :scale: 40%
    :alt: Book Cyborg page.
 
-.. include:: intro.rst
+   *Zentree* `simpledesktops image`_
 
 Welcome to git-workflow's documentation!
 ====================================================================
@@ -30,3 +30,4 @@ Indices and tables
 * :ref:`search`
 
 .. _`git-workflow`: https://github.com/parrondo/git-workflow
+.. _`simpledesktops image`: http://static.simpledesktops.com/uploads/desktops/2015/02/20/zentree_1.png.625x385_q100.png/
