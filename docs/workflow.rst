@@ -46,14 +46,14 @@ When you start a new feature or a bugfix, you create a new branch from master HE
 ``$ (featureA) git add -A``
 ``$ (featureA) git commit -a -m "featureA part 1"``
 ``$ (featureA) git commit -a -m "featureA part 2"``
-|
+
   .. figure:: images/general/image2.png
      :align: left
      :scale: 100%
      :alt: Development branches.
      
      *Figure 2: Development branches.*
-|
+
 Follow branch master evolution and regularly ensure your code still works, by rebasing branch featureA on branch master.
 
 ``$ (featureA) git rebase master``
