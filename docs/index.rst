@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. figure:: images/general/general-book-cyborg.jpg
+.. figure:: images/general/simpledesktops.png
    :align: center
    :scale: 40%
    :alt: Book Cyborg page.
