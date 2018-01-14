@@ -120,7 +120,7 @@ A complete history example
      :scale: 100%
      :alt: Development branches merge.
      
-     *Figure 6: Stable branch.*
+     *Figure 6: Complete example.*
 
 Git-simple to simplify your life
 ================================
