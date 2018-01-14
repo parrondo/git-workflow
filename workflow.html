@@ -72,7 +72,7 @@
 <h2>Master branch<a class="headerlink" href="#master-branch" title="Permalink to this headline">¶</a></h2>
 <p>Branch master is the common trunk and simply contains all the files of the next release. Since we don&#8217;t work directly on it, it should evolves only with merges.</p>
 <blockquote>
-<div><div class="figure align-left" id="id1">
+<div><div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/image1.png"><img alt="Master branch." src="_images/image1.png" style="width: 700.0px; height: 163.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 1: Master branch.</em></span></p>
 </div>
@@ -87,7 +87,7 @@
 <code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">1&quot;</span></code>
 <code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">2&quot;</span></code></p>
 <blockquote>
-<div><div class="figure align-left" id="id2">
+<div><div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/image2.png"><img alt="Development branches." src="_images/image2.png" style="width: 700.0px; height: 172.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 2: Development branches.</em></span></p>
 </div>
@@ -97,7 +97,7 @@
 When developments are done (commits fa1 / fa2 in schema below), you do a last rebase.
 If tests pass on development branch after rebase, they should pass on master after merge, so <strong>you ensure that branch &#8220;master&#8221; is always working well</strong></p>
 <blockquote>
-<div><div class="figure align-left" id="id3">
+<div><div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/image3.png"><img alt="Development branches rebase master." src="_images/image3.png" style="width: 700.0px; height: 149.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 3: Development branches rebase master.</em></span></p>
 </div>
@@ -106,7 +106,7 @@ If tests pass on development branch after rebase, they should pass on master aft
 <p><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">master</span></code>
 <code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span> <span class="pre">featureA</span></code></p>
 <blockquote>
-<div><div class="figure align-left" id="id4">
+<div><div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/image4.png"><img alt="Development branches merge." src="_images/image4.png" style="width: 700.0px; height: 158.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 4: Development branches merge.</em></span></p>
 </div>
@@ -124,7 +124,7 @@ If tests pass on development branch after rebase, they should pass on master aft
 <p>This branch may be deployed on different servers.</p>
 <p>While development goes on, you possibly have to do some hotfixes (for example: commit hf1 in schema below), that must be sent in production quickly. These hotfixes are done directly on the stable branch.</p>
 <blockquote>
-<div><div class="figure align-left" id="id5">
+<div><div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/image5.png"><img alt="Development branches merge." src="_images/image5.png" style="width: 700.0px; height: 215.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 5: Stable branch.</em></span></p>
 </div>
@@ -138,7 +138,7 @@ If tests pass on development branch after rebase, they should pass on master aft
 <div class="section" id="a-complete-history-example">
 <h2>A complete history example<a class="headerlink" href="#a-complete-history-example" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><div class="figure align-left" id="id6">
+<div><div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/image6.png"><img alt="Development branches merge." src="_images/image6.png" style="width: 700.0px; height: 308.0px;" /></a>
 <p class="caption"><span class="caption-text"><em>Figure 6: Stable branch.</em></span></p>
 </div>
