@@ -30,7 +30,7 @@ Master branch
 Branch master is the common trunk and simply contains all the files of the next release. Since we don't work directly on it, it should evolves only with merges.
 
   .. figure:: images/general/image1.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Master branch.
      
@@ -48,7 +48,7 @@ When you start a new feature or a bugfix, you create a new branch from master HE
 ``$ (featureA) git commit -a -m "featureA part 2"``
 
   .. figure:: images/general/image2.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Development branches.
      
@@ -61,7 +61,7 @@ When developments are done (commits fa1 / fa2 in schema below), you do a last re
 If tests pass on development branch after rebase, they should pass on master after merge, so **you ensure that branch "master" is always working well**
 
   .. figure:: images/general/image3.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Development branches rebase master.
      
@@ -74,7 +74,7 @@ The maintainer can now merge this branch in master without big conflicts. Use no
 ``$ (master) git merge --no-ff featureA``
 
   .. figure:: images/general/image4.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Development branches merge.
      
@@ -99,7 +99,7 @@ This branch may be deployed on different servers.
 While development goes on, you possibly have to do some hotfixes (for example: commit hf1 in schema below), that must be sent in production quickly. These hotfixes are done directly on the stable branch.
 
   .. figure:: images/general/image5.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Development branches merge.
      
@@ -116,7 +116,7 @@ A complete history example
 ==========================
 
   .. figure:: images/general/image6.png
-     :align: left
+     :align: center
      :scale: 100%
      :alt: Development branches merge.
      
