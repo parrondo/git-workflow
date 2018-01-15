@@ -157,7 +157,8 @@ If tests pass on development branch after rebase, they should pass on master aft
 </ul>
 <p><em>Less time fighting Git.</em></p>
 <p>Here is the complet workflow with git and git-simple for both branchs (features and stables). gh-pages branch is actualized with <code class="docutils literal"><span class="pre">gpublish</span></code>.</p>
-<table border="1" class="docutils">
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Complet workflow with git</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -176,6 +177,71 @@ If tests pass on development branch after rebase, they should pass on master aft
 </tr>
 <tr class="row-even"><td>&#160;</td>
 <td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">stable1.0</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">1&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;hotfix</span> <span class="pre">1&quot;</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">2&quot;</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span> <span class="pre">featureA</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span> <span class="pre">stable1.0</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-d</span> <span class="pre">featureA</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">:featureA</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">:stable1.0</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id8">
+<caption><span class="caption-text">Complet workflow with git-simple</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Development Branch</th>
+<th class="head">Stable Branch</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#160;</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">git</span> <span class="pre">tag</span> <span class="pre">1.0</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gbranch</span> <span class="pre">featureA</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gbranch</span> <span class="pre">stable1.0</span></code></td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">gpush</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">1&quot;</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;hotfix</span> <span class="pre">1&quot;</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;featureA</span> <span class="pre">part</span> <span class="pre">2&quot;</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(featureA)</span> <span class="pre">gbranch</span> <span class="pre">master</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(stable1.0)</span> <span class="pre">gbranch</span> <span class="pre">master</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gmerge</span> <span class="pre">featureA</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gmerge</span> <span class="pre">stable1.0</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gbranch</span> <span class="pre">-d</span> <span class="pre">featureA</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gpush</span> <span class="pre">origin</span> <span class="pre">:featureA</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">(master)</span> <span class="pre">gpush</span> <span class="pre">origin</span> <span class="pre">:stable1.0</span></code></td>
 </tr>
 </tbody>
 </table>

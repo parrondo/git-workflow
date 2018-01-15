@@ -138,15 +138,37 @@ Git sometimes requires typing two or three commands just to execute something ba
 
 Here is the complet workflow with git and git-simple for both branchs (features and stables). gh-pages branch is actualized with ``gpublish``.
 
-.. csv-table::
+.. csv-table:: Complet workflow with git
     :header: Development Branch, Stable Branch
 
     " ", ``$ (master) git tag 1.0``
     ``$ (master) git checkout -b featureA``, ``$ (master) git checkout -b stable1.0``
     " ",``$ (stable1.0) git push origin stable1.0``
+    ``$ (featureA) git commit -a -m "featureA part 1"``, ``$ (stable1.0) git commit -a -m "hotfix 1"``
+    ``$ (featureA) git commit -a -m "featureA part 2"``, " "
+    ``$ (featureA) git rebase master``, ``$ (stable1.0) git rebase master``
+    ``$ (featureA) git checkout master``, ``$ (stable1.0) git checkout master``
+    ``$ (master) git merge --no-ff featureA``, ``$ (master) git merge --no-ff stable1.0``
+    ``$ (master) git branch -d featureA``, " "
+    ``$ (master) git push origin :featureA``, ``$ (master) git push origin :stable1.0``
+
+.. csv-table:: Complet workflow with git-simple
+    :header: Development Branch, Stable Branch
+
+    " ", ``$ (master) git tag 1.0``
+    ``$ (master) gbranch featureA``, ``$ (master) gbranch stable1.0``
+    " ",``$ (stable1.0) gpush``
+    ``$ (featureA) git commit -a -m "featureA part 1"``, ``$ (stable1.0) git commit -a -m "hotfix 1"``
+    ``$ (featureA) git commit -a -m "featureA part 2"``, " "
+    ``$ (featureA) git rebase master``, ``$ (stable1.0) git rebase master``
+    ``$ (featureA) gbranch master``, ``$ (stable1.0) gbranch master``
+    ``$ (master) gmerge featureA``, ``$ (master) gmerge stable1.0``
+    ``$ (master) gbranch -d featureA``, " "
+    ``$ (master) gpush origin :featureA``, ``$ (master) gpush origin :stable1.0``
 
 
 References
 ==========
 .. _`Florent Lebreton`: http://fle.github.io/
-.. _`git-simple`: https://github.com/parrondo/git-simple
+.. _git-simple: https://github.com/parrondo/git-simple
+
