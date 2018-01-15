@@ -170,10 +170,11 @@ Here is the complet workflow with git and git-simple for both branchs (features 
 
 References
 ==========
-`Florent Lebreton`_: http://fle.github.io/
-`git-simple`_: https://github.com/parrondo/git-simple
+
+* `Florent Lebreton`_: http://fle.github.io/an-efficient-git-workflow-for-midlong-term-projects.html
+* `git-simple`_: https://github.com/parrondo/git-simple
 
 
-.. _`Florent Lebreton`: http://fle.github.io/
+.. _`Florent Lebreton`: http://fle.github.io/an-efficient-git-workflow-for-midlong-term-projects.html
 .. _`git-simple`: https://github.com/parrondo/git-simple
 
