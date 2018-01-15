@@ -58,7 +58,8 @@ where ``(master)$`` and ``(featureA)$`` means that you are working on master bra
 
 Follow branch master evolution and regularly ensure your code still works, by rebasing branch featureA on branch master.
 
-``(featureA)$ git rebase master``
+* ``(featureA)$ git rebase master``
+
 When developments are done (commits fa1 / fa2 in schema below), you do a last rebase.
 If tests pass on development branch after rebase, they should pass on master after merge, so **you ensure that branch "master" is always working well**
 
