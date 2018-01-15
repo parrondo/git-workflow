@@ -138,7 +138,7 @@ Git sometimes requires typing two or three commands just to execute something ba
 
 Here is the complet workflow with git and git-simple for both branchs (features and stables). gh-pages branch is actualized with ``gpublish``.
 
-.. csv-table:: Complet workflow with git
+.. csv-table:: **Complete workflow with git**
     :header: Development Branch, Stable Branch
 
     " ", ``$ (master) git tag 1.0``
@@ -152,7 +152,8 @@ Here is the complet workflow with git and git-simple for both branchs (features 
     ``$ (master) git branch -d featureA``, " "
     ``$ (master) git push origin :featureA``, ``$ (master) git push origin :stable1.0``
 
-.. csv-table:: Complet workflow with git-simple
+|
+.. csv-table:: **Complete workflow with git-simple**
     :header: Development Branch, Stable Branch
 
     " ", ``$ (master) git tag 1.0``
@@ -169,6 +170,10 @@ Here is the complet workflow with git and git-simple for both branchs (features 
 
 References
 ==========
+`Florent Lebreton`_: http://fle.github.io/
+`git-simple`_: https://github.com/parrondo/git-simple
+
+
 .. _`Florent Lebreton`: http://fle.github.io/
-.. _git-simple: https://github.com/parrondo/git-simple
+.. _`git-simple`: https://github.com/parrondo/git-simple
 
