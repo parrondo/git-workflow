@@ -39,7 +39,7 @@ Branch master is the common trunk and simply contains all the files of the next 
 Development branches
 ====================
 
-When you start a new feature or a bugfix, you create a new branch from master HEAD
+When you start a new feature or a bugfix, you create a new branch from master HEAD.
 
 ``(master)$ git checkout -b featureA``
 ``(featureA)$ ...“You work and modify all you need”...``
@@ -47,6 +47,8 @@ When you start a new feature or a bugfix, you create a new branch from master HE
 ``(featureA)$ git commit -a -m "featureA part 1"``
 ``(featureA)$ git commit -a -m "featureA part 2"``
 
+where ``(master)$`` and ``(featureA)$`` means that you are working on master branch and on featureA branch respectively.
+ 
   .. figure:: images/general/image2.png
      :align: center
      :scale: 100%
