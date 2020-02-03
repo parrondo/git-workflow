@@ -17,7 +17,7 @@ To handle this, we have set some simple rules:
 Workflow
 ========
 
-There are Four kind of brach:
+There are Four kind of branches:
 
 * Master
 * Development branches (deleted after merge)
